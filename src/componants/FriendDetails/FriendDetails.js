@@ -5,6 +5,8 @@ const FriendDetails = () => {
     const friend = useLoaderData();
     console.log(friend);
 
+
+
     return (
         <div>
             {/* path: '/friend/:friendId': use korate dynamic hoyegelo */}
