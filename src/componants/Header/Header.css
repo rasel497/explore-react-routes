@@ -12,3 +12,8 @@
     background-color: palevioletred;
     color: white;
 }
+
+.active {
+    background-color: aquamarine;
+    color: black;
+}

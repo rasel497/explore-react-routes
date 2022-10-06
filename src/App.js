@@ -8,6 +8,7 @@ import Main from './layout/Main';
 import Friends from './componants/Friends/Friends';
 import FriendDetails from './componants/FriendDetails/FriendDetails';
 import Posts from './componants/Posts/Posts';
+import PostDetails from './componants/PostDetails/PostDetails';
 
 function App() {
   const router = createBrowserRouter([
@@ -38,6 +39,13 @@ function App() {
             return fetch('https://jsonplaceholder.typicode.com/posts');
           },
           element: <Posts></Posts>
+        },
+        {
+          path: '/post/:postId',
+          loader: async ({ params }) => {
+            return fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
+          },
+          element: <PostDetails></PostDetails>
         }
       ]
     },
